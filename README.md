@@ -39,12 +39,12 @@ $ sail php artisan schedule:work
 
 Retrieve number by id <br> actions: get, set
 ~~~
-$ sail php artisan exec:number [-a|action] <default=get> [--id]
+$ sail php artisan exec:number -a [action <default=get>] --id=<value>
 ~~~
 
 Generate number
 ~~~
-$ sail php artisan exec:number [action]
+$ sail php artisan exec:number -a [action]
 ~~~
 
 Generate report.txt and send email

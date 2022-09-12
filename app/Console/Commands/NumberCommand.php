@@ -34,7 +34,7 @@ class NumberCommand extends Command
         $number = match ($this->option('action')) {
             'set' => $numberManager->storeNumber(
                 NumberCreator::generate(),
-                $userManager->getUser('test@test')
+                $userManager->getUser('test@test.com')
             ),
             'get' => $numberManager->getNumber($this->option('id'))
         };

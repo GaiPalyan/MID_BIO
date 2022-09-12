@@ -37,5 +37,7 @@ class ReportCommand extends Command
         $reportFile = NumberReporter::getReport();
         dump($reportFile);
         SendReportMail::dispatch()->onQueue('report_mail');
+
+        $this->info('Report sent by email as report.txt file');
     }
 }
