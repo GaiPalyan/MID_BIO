@@ -1,4 +1,5 @@
 ### Тестовое задание на позицию PHP-разработчик для компании ООО МИД БИОТЕХ
+#### API для генерации рандомного числа
 
 #### Install
 
@@ -23,7 +24,7 @@ $ sail php artisan migrate
 
 #### Init scheduling
 
-Run numbers report generate & send email once per day schedule
+Run report generate & send email schedule once per day 
 ~~~
 $ sail php artisan schedule:work
 ~~~
@@ -44,6 +45,16 @@ Generate report.txt and send email
 ~~~
 $ sail php artisan report:generate
 ~~~
+
+##### Routs
+
+| entity | route             | method |
+|--------|-------------------|--------|
+| user   | api/register      | POST   |
+| user   | api/login         | POST   |
+| user   | api/logout        | POST   |   
+| number | api/generate      | POST   |   
+| number | api/retrieve/{id} | GET    |
 
 #### Registration
 
@@ -73,15 +84,5 @@ Response example
 ~~~
 В целях простоты у токена нет срока жизни, при повторной аутентификации токен будет уничтожен и выдан новый.
 
-
-##### Routs
-
-| entity | route             | method |
-|--------|-------------------|--------|
-| user   | api/register      | POST   |
-| user   | api/login         | POST   |
-| user   | api/logout        | POST   |   
-| number | api/generate      | POST   |   
-| number | api/retrieve/{id} | GET    |   
 
 
