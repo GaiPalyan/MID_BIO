@@ -22,6 +22,12 @@ $ sail up
 $ sail php artisan migrate
 ~~~
 
+#### Database seeding
+
+~~~
+$ sail php artisan db:seed
+~~~
+
 #### Init scheduling
 
 Run report generate & send email schedule once per day 
@@ -33,7 +39,7 @@ $ sail php artisan schedule:work
 
 Retrieve number by id <br> actions: get, set
 ~~~
-$ sail php artisan exec:number [action] <default=get> [id]
+$ sail php artisan exec:number [-a|action] <default=get> [--id]
 ~~~
 
 Generate number
