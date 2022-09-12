@@ -13,7 +13,7 @@ from 'sync' to 'database'
 #### Start docker containers
 
 ~~~
-$ sail up 
+$ sail up -d
 ~~~
 
 #### Migration
