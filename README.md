@@ -3,17 +3,46 @@
 #### Install
 
 ~~~
-$ alias sail='[ -f sail ] && bash sail || bash vendor/bin/sail'
-$ sail up 
+$ make setup
 
 change QUEUE_CONNECTION environment in .env file
 from 'sync' to 'database'
 ~~~
 
+#### Start docker containers
+
+~~~
+$ sail up 
+~~~
+
 #### Migration
 
 ~~~
-sail php artisan migrate
+$ sail php artisan migrate
+~~~
+
+#### Init scheduling
+
+Run numbers report generate & send email once per day schedule
+~~~
+$ sail php artisan schedule:work
+~~~
+
+#### Commands
+
+Retrieve number by id <br> actions: get, set
+~~~
+$ sail php artisan exec:number [action] <default=get> [id]
+~~~
+
+Generate number
+~~~
+$ sail php artisan exec:number [action]
+~~~
+
+Generate report.txt and send email
+~~~
+$ sail php artisan report:generate
 ~~~
 
 #### Registration
